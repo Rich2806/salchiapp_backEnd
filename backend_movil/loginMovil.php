@@ -19,6 +19,8 @@
     if($resultado->num_rows > 0){
         $row = $resultado->fetch_array();
         $respuesta['contrasena'] = $row['contrasena'];
+        $respuesta['nombre'] = $row['nombre'];
+        $respuesta['puesto'] = $row['puesto'];
         echo json_encode(array($respuesta));
     }
 
